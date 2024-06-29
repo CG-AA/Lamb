@@ -5,3 +5,8 @@
  * using sleepy-discord library.
  */
 
+#include <sleepy_discord.h>
+
+
+int main() {
+}
