@@ -5,6 +5,7 @@
  */
 #include <nlohmann/json.hpp>
 #include <fstream>
+#include "Wool/Wool.hpp"
 
 auto getSettings() {
     std::ifstream file("settings.json");
@@ -16,4 +17,8 @@ auto getSettings() {
 
 int main() {
     auto settings = getSettings();
+	Wool wool;
+	wool.setPUBKEY(settings["PUBKEY"]);
+	wool.setToken(settings["token"]);
+	wool.run();
 }
