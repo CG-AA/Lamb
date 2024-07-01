@@ -3,6 +3,4 @@ project(Lamb)
 
 add_executable(Lamb main.cpp)
 
-add_subdirectory(Wool)
-
 target_link_libraries(Lamb Wool)

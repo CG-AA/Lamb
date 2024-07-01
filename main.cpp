@@ -5,7 +5,7 @@
  */
 #include <nlohmann/json.hpp>
 #include <fstream>
-#include "Wool/Wool.hpp"
+#include <Wool/Wool.hpp>
 
 auto getSettings() {
     std::ifstream file("settings.json");
