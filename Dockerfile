@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     make \
     g++ \
     libssl-dev \
-    zlib1g-dev
+    zlib1g-dev \
+    libfmt-dev
 
 # Wool dependencies
 RUN apt-get install -y \
@@ -30,3 +31,16 @@ RUN git clone https://github.com/CG-AA/Wool && \
     cmake .. && \
     make && \
     make install
+
+# Lamb dependencies
+RUN apt-get install -y \
+    nlohmann-json3-dev
+
+COPY . .
+
+RUN mkdir build && \
+    cd build && \
+    cmake .. && \
+    make
+
+CMD ["./Lamb"]
