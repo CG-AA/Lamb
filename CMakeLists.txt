@@ -5,4 +5,4 @@ find_package(Wool REQUIRED)
 
 add_executable(Lamb main.cpp)
 
-target_link_libraries(Lamb Wool)
+target_link_libraries(Lamb Wool::Wool)
