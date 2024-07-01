@@ -43,4 +43,6 @@ RUN mkdir build && \
     cmake .. && \
     make
 
-CMD ["./Lamb"]
+EXPOSE 45900
+
+CMD ["./Lamb/build/Lamb"]
